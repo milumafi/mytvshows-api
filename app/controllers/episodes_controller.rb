@@ -4,7 +4,7 @@ class EpisodesController < ApplicationController
   
   # GET /seasons/:season_id/episodes
   def index
-    json_response(@season.episodes)
+    json_response(@season.episodes.order(:episode_num))
   end
   
   # GET /seasons/:season_id/episodes/:id
@@ -33,7 +33,7 @@ class EpisodesController < ApplicationController
   private
   
   def episode_params
-    params.permit(:title,:plot)
+    params.permit(:title,:plot,:episode_num)
   end
   
   def set_season

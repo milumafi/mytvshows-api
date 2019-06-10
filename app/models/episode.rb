@@ -3,5 +3,5 @@ class Episode < ApplicationRecord
   belongs_to :season
   
   # validation
-  validates_presence_of :title, :plot
+  validates_presence_of :title, :plot, :episode_num
 end

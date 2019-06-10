@@ -63,7 +63,7 @@ RSpec.describe 'Episodes API' do
   
   # Test suite for PUT /seasons/:season_id/episodes
   describe 'POST /seasons/:season_id/episodes' do
-    let(:valid_attributes){{ title: 'El Boom', plot: 'XXXXXXXX' }}
+    let(:valid_attributes){{ title: 'El Boom', plot: 'XXXXXXXX', episode_num: 1 }}
     
     context 'when request attributes are valid' do
       before { post "/seasons/#{season_id}/episodes", params: valid_attributes }

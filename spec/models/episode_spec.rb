@@ -9,4 +9,5 @@ RSpec.describe Episode, type: :model do
   # ensure columns title and plot are present before saving
   it { should validate_presence_of(:title) }
   it { should validate_presence_of(:plot) }
+  it { should validate_presence_of(:episode_num)}
 end

@@ -1,0 +1,1 @@
+json.(episode, :episode_num, :title, :plot)
