@@ -4,8 +4,7 @@ class SeasonsController < ApplicationController
   # GET /seasons
   def index
     @seasons = Season.all.order(:created_at)
-    json_response(@seasons)
-    #respond_to :json
+    #json_response(@seasons)
   end
    
   # POST /seasons
