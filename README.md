@@ -2,17 +2,17 @@
 
 This repo is the source code of RESTfull JSON API developed with Rails.
 
-* Ruby on Rails version *
+* **Ruby on Rails version**
 
 Ruby 2.6.1
 Rails 5.2.3
 
-* Prerequisits *
+* **Prerequisits**
 
 Postgresql installed
 Ruby on Rails installed
 
-* Setup *
+* **Setup**
 
 1. Clone or Download the repo.
 
