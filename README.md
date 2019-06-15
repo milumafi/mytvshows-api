@@ -58,7 +58,7 @@ http POST :3000/seasons/:season_id/episodes title='episode 1 suits' plot='descri
 http POST :3000/seasons/:season_id/episodes title='episode 2 suits' plot='descripción episode 2 suits' episode_num=2
 http POST :3000/seasons/:season_id/episodes title='episode 3 suits' plot='descripción episode 3 suits' episode_num=3
 http POST :3000/users email='example@gmail.com'
-http POST :3000/user/:user_id/contents title='suits' video_quality='HD' price='2.99'
+http POST :3000/users/:user_id/contents title='suits' video_quality='HD' price='2.99'
 ```
 
 7. Get data using GET end-points, here you have some examples:
