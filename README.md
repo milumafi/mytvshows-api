@@ -18,15 +18,25 @@ Ruby on Rails installed
 
 `$ git clone https://github.com/milumafi/mytvshows-api.git`
 
-2. Initialize database
-`$ rails db:setup`
-
-3. Create user into postgresql database, provide CreateDB rights to the user
+2. Create user into postgresql database, provide CreateDB rights to the user
 
 ```
   database: mytvshows_api_development
   username: mytvshows_user
   password: 12345678
+  
+  $ psql -U postgres 
+  postgres=# CREATE USER mytvshows_user PASSWORD '12345678';
+  postgres=# ALTER ROLE mytvshows_user WITH CREATEDB;
+  postgres=# \du
+  postgres=# \quit
+```
+
+3. Initialize gem's and database
+
+```
+$ bundle install
+$ rails db:setup
 ```
 
 4. Run the app
