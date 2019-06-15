@@ -1,17 +1,18 @@
-# mytvshows-api (RESTful JSON API with Rails 5) - README
+# README - mytvshows-api (RESTful JSON API with Rails 5) 
 
 This repo is the source code of RESTfull JSON API developed with Rails.
 
+* Ruby on Rails version *
 
-* Ruby on Rails version
 Ruby 2.6.1
 Rails 5.2.3
 
-* Prerequisits
+* Prerequisits *
+
 Postgresql installed
 Ruby on Rails installed
 
-* Setup
+* Setup *
 
 1. Clone or Download the repo.
 
@@ -27,9 +28,7 @@ Ruby on Rails installed
 
 4. Check the app:
 
-````
-http://localhost:3000
-```
+`http://localhost:3000`
 
 4. Insert data to database using POST end-points, here you have some examples:
 
@@ -47,7 +46,7 @@ POST	-->		http POST :3000/user/:user_id/contents title='suits' video_quality='HD
 
 5. Get data using GET end-points, here you have some examples:
 
-````
+```
 GET 	--> 	http :3000/movies
 GET 	-->		http :3000/seasons
 GET 	-->		http :3000/contents
