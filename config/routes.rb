@@ -8,5 +8,10 @@ Rails.application.routes.draw do
     resources :episodes
   end
   
-  resources :contents, only: [:index], format: "json" 
+  #resources :contents, only: [:index], format: "json" 
+  get 'contents', action: :show, controller: 'contents', format: "json" 
+  
+  resources :users do
+    resources :contents
+  end
 end

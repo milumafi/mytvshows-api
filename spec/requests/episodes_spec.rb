@@ -61,7 +61,7 @@ RSpec.describe 'Episodes API' do
     end
   end
   
-  # Test suite for PUT /seasons/:season_id/episodes
+  # Test suite for POST /seasons/:season_id/episodes
   describe 'POST /seasons/:season_id/episodes' do
     let(:valid_attributes){{ title: 'El Boom', plot: 'XXXXXXXX', episode_num: 1 }}
     

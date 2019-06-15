@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_160404) do
+ActiveRecord::Schema.define(version: 2019_06_13_152349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contents", force: :cascade do |t|
+    t.string "content_type"
+    t.bigint "content_id"
+    t.string "video_quality"
+    t.float "price"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_contents_on_user_id"
+  end
 
   create_table "episodes", force: :cascade do |t|
     t.string "title"
@@ -39,5 +50,12 @@ ActiveRecord::Schema.define(version: 2019_06_08_160404) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "contents", "users"
   add_foreign_key "episodes", "seasons"
 end
